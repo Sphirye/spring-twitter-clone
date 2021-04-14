@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
+//Service to ident multipart files with an appropriate context.
 @Service
 @Transactional
 public class MediaService {

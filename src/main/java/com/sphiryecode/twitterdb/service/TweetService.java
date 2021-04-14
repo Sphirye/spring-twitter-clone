@@ -28,6 +28,12 @@ public class TweetService {
             tweet.setBody("Tweet 2");
             tweet.setTweetUser(userRepository.findByTag("TagExample2"));
             tweetRepository.save(tweet);
+
+            tweet = new Tweet();
+            tweet.setBody("Tweet 3 that aparently is a tweet 1 reply, looks great, dont you think? In deserunt exercitation mollit dolore pariatur labore exercitation sit reprehenderit magna reprehenderit anim do non ut amet duis in in culpa enim esse quis cons");
+            tweet.setTweetUser(userRepository.findByTag("TagExample2"));
+            tweet.setRepliedTweet(findById(1L));
+            tweetRepository.save(tweet);
         }
     }
 

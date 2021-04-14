@@ -2,9 +2,6 @@ package com.sphiryecode.twitterdb.controller;
 
 import com.sphiryecode.twitterdb.entity.Media;
 import com.sphiryecode.twitterdb.entity.ProfilePhoto;
-import com.sphiryecode.twitterdb.entity.User;
-import com.sphiryecode.twitterdb.repository.ProfilePhotoRepository;
-import com.sphiryecode.twitterdb.repository.UserRepository;
 import com.sphiryecode.twitterdb.service.MediaService;
 import com.sphiryecode.twitterdb.service.ProfilePhotoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +13,11 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 public class MediaController {
 
     @Autowired MediaService mediaService;
     @Autowired ProfilePhotoService profilePhotoService;
-    @Autowired ProfilePhotoRepository profilePhotoRepository;
-    @Autowired UserRepository userRepository;
 
     @GetMapping("/api/user/{userTag}/profile/photo/")
     public ResponseEntity<List<ProfilePhoto>> getProfilePhotos(@PathVariable String userTag) {

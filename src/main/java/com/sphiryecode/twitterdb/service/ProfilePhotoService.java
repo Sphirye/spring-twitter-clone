@@ -18,12 +18,17 @@ public class ProfilePhotoService {
     @Autowired UserRepository userRepository;
     @Autowired ProfilePhotoRepository profilePhotoRepository;
 
+    //Here, the profile photo of a user will be activated. Unlike on twitter, you can access previous profile photos.
     public ProfilePhoto create(String userTag, Media media) {
 
         ProfilePhoto profilePhoto = new ProfilePhoto();
         profilePhoto.setMedia(media);
         profilePhoto.setUser(userRepository.findByTag(userTag));
         profilePhoto.setIsActive(activate(userTag));
+
+        userRepository.findByTag(userTag).setProfilePhotoUrl(
+                media.getFile().getUrl()
+        );
 
         return profilePhotoRepository.save(profilePhoto);
     }

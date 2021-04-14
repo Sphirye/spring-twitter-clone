@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+//Service to create/save multipart files in the database (normally as media entities)
 @Service
 @Transactional
 public class FileService {

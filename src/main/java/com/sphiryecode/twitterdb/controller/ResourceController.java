@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.xml.ws.Response;
 
+//Obsolete code, please ignore
 @RestController
 public class ResourceController {
 

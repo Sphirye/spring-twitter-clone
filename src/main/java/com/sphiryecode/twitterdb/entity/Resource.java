@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+//Obsolete code, please ignore
 @Entity
 @Data
 public class Resource {

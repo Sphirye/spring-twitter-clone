@@ -27,7 +27,5 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "tweetUser")
     private List<Tweet> tweets = new ArrayList<>();
 
-    @OneToOne
-    private Media media;
-
+    private String profilePhotoUrl;
 }
