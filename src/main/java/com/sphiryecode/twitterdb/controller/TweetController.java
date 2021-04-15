@@ -20,6 +20,7 @@ public class TweetController {
         return ResponseEntity.status(HttpStatus.OK).body(tweetService.findAll());
     }
 
+    //DEBO CAMBIAR ESTO PARA QUE TAMBIEN RECIBA EL USUARIO Y EMPIECE BUSCANDO SI EL TWEET DE DICHA ID LE PERTENECE AL USUARIO
     @GetMapping("/public/tweets/{id}")
     public ResponseEntity<Tweet> getTweet(@PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK).body(tweetService.findById(id));

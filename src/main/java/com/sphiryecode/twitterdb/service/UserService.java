@@ -61,6 +61,12 @@ public class UserService {
                     "XD"
             );
 
+            user = new User();
+            user.setTag("NiggaSoda");
+            user.setUsername("MEDIC GAMING1!!");
+            user.setBio("che para bolas aqui estas conchudo la ctm");
+            userRepository.save(user);
+
         }
     }
 
